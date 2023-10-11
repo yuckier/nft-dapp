@@ -3,6 +3,9 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useNetwork, useWalletClient } from "wagmi";
 import { writeContract, waitForTransaction } from "@wagmi/core";
 import { parseEther } from "viem";
+import { toast } from "react-toastify";
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import config from "./config.json";
 import abi from "./abi.json";
 
@@ -19,7 +22,6 @@ const MintComponent = () => {
   }, [mintAmount]);
 
   const handleMint = async () => {
-
     const { hash } = await writeContract({
       mode: "recklesslyUnprepared",
       address: config.CONTRACT_ADDRESS,
@@ -29,6 +31,8 @@ const MintComponent = () => {
       value: parseEther(totalCost.toString()),
     });
     await waitForTransaction({ hash });
+
+    toast.success("Mint successfully!");
   };
 
   return (
@@ -49,6 +53,7 @@ const MintComponent = () => {
           <button onClick={handleMint}>Mint</button>
         </div>
       )}
+      <ToastContainer position="top-center" />
     </div>
   );
 };
