@@ -1,11 +1,6 @@
 {
   "CONTRACT_ADDRESS": "0x35c451485b3f708fd5000c9188ab68f6c1a5afb6",
   "SCAN_LINK": "https://goerli.etherscan.io/token/0x35c451485b3f708fd5000c9188ab68f6c1a5afb6",
-  "NETWORK": {
-    "NAME": "Goerli",
-    "SYMBOL": "Goerli ETH",
-    "ID": 5
-  },
   "NFT_NAME": "Nerdy Coder Clones",
   "SYMBOL": "NCC",
   "MAX_SUPPLY": 100,
