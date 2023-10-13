@@ -12,10 +12,10 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
   [publicProvider()]
 );
 
-const projectId = "149f84ff95a763d7bccbb4f6cd3cf883";
+const projectId = "a10bb5aab9167131c79cc6df874d98af";
 
 const { wallets } = getDefaultWallets({
-  appName: "HoodyGang",
+  appName: "MintDapp",
   projectId: projectId,
   chains,
 });
