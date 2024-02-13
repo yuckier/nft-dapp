@@ -33,6 +33,9 @@ function App() {
   return (
     <WagmiConfig config={config}>
       <RainbowKitProvider chains={chains}>
+        <div class="logo">
+          <img src="/logo.png"></img>
+        </div>
         <MintComponent />
       </RainbowKitProvider>
     </WagmiConfig>

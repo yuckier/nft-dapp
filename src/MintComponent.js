@@ -36,13 +36,13 @@ const MintComponent = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "30px" }}>
+    <div>
       <div style={{ margin: "auto", width: "fit-content" }}>
         <ConnectButton />
       </div>
       {signer && chains[0]?.id == chain?.id && (
-        <div style={{ marginTop: "100px" }}>
-          <h2>Mint NFT</h2>
+        <div class="mint-zone">
+          <h2>mint pixel tubby cat</h2>
           <input
             type="number"
             min={0}
@@ -50,7 +50,7 @@ const MintComponent = () => {
             onChange={(e) => setMintAmount(e.target.value)}
           />
           <div>Total Cost: {totalCost} ETH</div>
-          <button onClick={handleMint}>Mint</button>
+          <button role="button" onClick={handleMint}>Mint!</button>
         </div>
       )}
       <ToastContainer position="top-center" />
