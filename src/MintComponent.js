@@ -40,7 +40,7 @@ const MintComponent = () => {
       <div style={{ margin: "auto", width: "fit-content" }}>
         <ConnectButton />
       </div>
-      {signer && chains[0]?.id == chain?.id && (
+      {signer && chains[0]?.id === chain?.id && (
         <div class="mint-zone">
           <h2>mint pixel tubby cat</h2>
           <input
@@ -50,7 +50,7 @@ const MintComponent = () => {
             onChange={(e) => setMintAmount(e.target.value)}
           />
           <div>Total Cost: {totalCost} ETH</div>
-          <button role="button" onClick={handleMint}>Mint!</button>
+          <button onClick={handleMint}>Mint!</button>
         </div>
       )}
       <ToastContainer position="top-center" />
